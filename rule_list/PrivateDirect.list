@@ -5,8 +5,6 @@ IP-CIDR,104.255.66.193/32,no-resolve
 IP-CIDR,199.15.77.250/32,no-resolve
 
 DOMAIN-SUFFIX,ip138.com
-DOMAIN,api.steampowered.com
-DOMAIN,test.steampowered.com
 DOMAIN,rfc.tnanstar.life
 
 IP-CIDR,43.129.69.152/32,no-resolve

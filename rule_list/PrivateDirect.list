@@ -2,7 +2,7 @@
 DOMAIN-SUFFIX,sason.top
 IP-CIDR,104.255.66.193/32,no-resolve
 
-
 DOMAIN-SUFFIX,ip138.com
+DOMAIN,api.steampowered.com
 
 IP-CIDR,43.129.69.152/32,no-resolve

@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,sason.top
 DOMAIN,rfc-hk.sason.top
 IP-CIDR,104.255.66.193/32,no-resolve
 IP-CIDR,199.15.77.250/32,no-resolve
+IP-CIDR,199.15.79.122/32,no-resolve
 IP-CIDR,103.170.233.65/32,no-resolve
 
 DOMAIN-SUFFIX,ip138.com

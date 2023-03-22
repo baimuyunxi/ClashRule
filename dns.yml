@@ -1,5 +1,6 @@
 dns:
   enable: true                         # DNS开关(false/true)
+  cache-size: 0
   listen: 0.0.0.0:53                   # DNS监听地址
   ipv6: false                          # IP6解析开关；如果为false，将返回ip6结果为空
 

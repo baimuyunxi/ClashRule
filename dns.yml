@@ -11,8 +11,8 @@ dns:
     - tls://223.5.5.5:853
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
-    - 'tls://8.8.8.8:853#节点选择'         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
-    - 'tls://208.67.222.222:853#节点选择'
+    - 'tcp://8.8.8.8#全球加速'         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
+    - 'tcp://208.67.222.222:#全球加速'
 
   fallback-filter:                    # 回落DNS服务器过滤
     geoip: true                       # 为真时，不匹配为geoip规则的使用fallback返回结果

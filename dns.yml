@@ -1,3 +1,4 @@
+tcp-concurrent: true
 dns:
   enable: true                         # DNS开关(false/true)
   cache-size: 0

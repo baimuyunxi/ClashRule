@@ -1,3 +1,4 @@
+bind-address: "*"
 allow-lan: true
 tcp-concurrent: true
 sniffer:                               #【Meta专属】sniffer域名嗅探器

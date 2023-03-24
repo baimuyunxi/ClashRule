@@ -15,6 +15,11 @@ sniffer:                               #【Meta专属】sniffer域名嗅探器
   force-domain:                        # 需要强制嗅探的域名，默认只对IP嗅探
     - '+.google.com'
     - '+.v2ex.com'
+    - '+.github.com'
+    - '+.googleapis.com'
+    - '+.googleusercontent.com'
+    - '+.googlevideo.com'
+
 dns:
   enable: true                         # DNS开关(false/true)
   cache-size: 0

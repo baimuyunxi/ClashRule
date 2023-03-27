@@ -19,7 +19,7 @@ dns:
   enhanced-mode: redir-host           # DNS模式(redir-host/fake-ip)
 
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - tls://1.12.12.12:853
+    - tls://120.53.53.53:853
     - tls://223.5.5.5:853
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq

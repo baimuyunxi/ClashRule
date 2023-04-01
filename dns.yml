@@ -3,12 +3,15 @@ allow-lan: true
 tcp-concurrent: true
 sniffer:                               #【Meta专属】sniffer域名嗅探器
   enable: true                         # 嗅探开关
-  force-dns-mapping: true              # 对所有未获取到域名的流量进行强制嗅探
+  force-dns-mapping: false              # 对所有未获取到域名的流量进行强制嗅探
 
   skip-domian:                         # 列表中的sni字段，保留mapping结果，不通过嗅探还原域名，优先级比force-domain高
     - 'Mijia Cloud'                    # 米家设备，建议加
     - 'dlg.io.mi.com'
     - '+.apple.com'                    # 苹果域名，建议加
+  force-domain:
+    - '+.v2ex.com'
+    - '+.google.com'
 
 dns:
   enable: true                         # DNS开关(false/true)

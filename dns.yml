@@ -29,9 +29,16 @@ dns:
     - 'tcp://8.8.8.8#全球加速'         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
     - 'tcp://208.67.222.222:5353#全球加速'
 
+  # 配置查询域名使用的 DNS 服务器
+  nameserver-policy:
+    "geosite:steam@cn,category-games@cn,cn":
+      - tls://223.5.5.5:853
+      - tls://120.53.53.53:853
+
   fallback-filter:                    # 回落DNS服务器过滤
     geoip: true                       # 为真时，不匹配为geoip规则的使用fallback返回结果
     geoip-code: CN                    # geoip匹配区域设定
     geosite:                          #【Meta专属】设定geosite某分类使用fallback返回结果
       - gfw
       - greatfire
+      - geolocation-!cn

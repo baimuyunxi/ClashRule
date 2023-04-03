@@ -26,8 +26,8 @@ dns:
     - tls://223.5.5.5:853
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
-    - 'tcp://8.8.8.8#全球加速'         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
-    - 'tcp://208.67.222.222:5353#全球加速'
+    - tls://8.8.8.8#全球加速         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
+    - tls://208.67.222.222#全球加速
 
   # 配置查询域名使用的 DNS 服务器
   nameserver-policy:

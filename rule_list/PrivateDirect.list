@@ -1,6 +1,7 @@
 # sason
 DOMAIN-SUFFIX,sason.top
 DOMAIN,rfc-hk.sason.top
+DOMAIN,msk-jp.598419.xyz
 IP-CIDR,104.255.66.193/32,no-resolve
 IP-CIDR,199.15.77.250/32,no-resolve
 IP-CIDR,199.15.79.122/32,no-resolve

@@ -22,12 +22,14 @@ dns:
   enhanced-mode: redir-host           # DNS模式(redir-host/fake-ip)
 
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - tls://120.53.53.53:853
-    - tls://223.5.5.5:853
+    - https://120.53.53.53/dns-query
+    - https://cn-sc-01.loopdns.uk:9443/dns-query
+    - https://edns.apad.pro:3306/dns-query
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
-    - tls://8.8.8.8#全球加速         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
-    - tls://208.67.222.222#全球加速
+    - https://8.8.8.8/dns-query#全球加速         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
+    - https://208.67.222.222/dns-query#全球加速
+    - https://9.9.9.11/dns-query#全球加速
 
   fallback-filter:                    # 回落DNS服务器过滤
     geoip: true                       # 为真时，不匹配为geoip规则的使用fallback返回结果

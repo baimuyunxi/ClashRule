@@ -1,6 +1,7 @@
 bind-address: "*"
 allow-lan: true
 tcp-concurrent: true
+ipv6: false
 sniffer:                               #【Meta专属】sniffer域名嗅探器
   enable: true                         # 嗅探开关
   force-dns-mapping: false              # 对所有未获取到域名的流量进行强制嗅探

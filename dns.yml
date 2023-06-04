@@ -21,10 +21,14 @@ dns:
   ipv6: false                          # IP6解析开关；如果为false，将返回ip6结果为空
 
   enhanced-mode: redir-host           # DNS模式(redir-host/fake-ip)
-
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+ 
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://120.53.53.53:443/dns-query
-    - https://223.5.5.5:443/dns-query
+    - https://cn-sc-01.loopdns.uk:9443/dns-query
+    - https://doh.apad.pro/dns-query
+    - https://cn-south.iqiqzz.com/dns-query 
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
     - https://8.8.8.8/dns-query#DNS         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问

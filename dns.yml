@@ -25,7 +25,6 @@ dns:
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://120.53.53.53:443/dns-query
     - https://223.5.5.5:443/dns-query
-    - https://doh.360.cn:443/dns-query
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
     - https://8.8.8.8/dns-query#DNS         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问

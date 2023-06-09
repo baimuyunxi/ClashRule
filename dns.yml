@@ -30,7 +30,6 @@ dns:
     - https://doh.apad.pro/dns-query
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://8.8.8.8/dns-query#DNS         #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
     - https://208.67.222.222/dns-query#DNS
     - https://9.9.9.11/dns-query#DNS
 

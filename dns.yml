@@ -28,6 +28,7 @@ dns:
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://cn-sc-01.loopdns.uk:9443/dns-query
     - https://doh.apad.pro/dns-query
+    - https://doh.pub/dns-query
 
   fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
     - https://208.67.222.222/dns-query#DNS

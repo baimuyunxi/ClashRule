@@ -28,7 +28,6 @@ dns:
     - 119.29.29.29
  
   nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://cn-sc-01.loopdns.uk:9443/dns-query
     - https://doh.apad.pro/dns-query
     - https://doh.pub/dns-query
 

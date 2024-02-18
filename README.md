@@ -1,9 +1,8 @@
 # ClashRule
 
 yaml:备份
-
+```
 parsers: # array
-
 - url: <https://suo>.*******
     yaml:
       prepend-rules:
@@ -33,3 +32,4 @@ parsers: # array
         - DOMAIN-SUFFIX,www.c-tv,DIRECT
         - IP-CIDR,192.0.0.0/8,DIRECT
         - IP-CIDR,134.0.0.0/8,DIRECT
+```

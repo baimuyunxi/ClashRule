@@ -46,7 +46,7 @@ sniffer:               # 嗅探域名 可选配置
       
 tun:                   # Tun 配置
   enable: true
-  stack: system        # 可选： system/gvisor/mixed；tun 模式堆栈,如无使用问题,建议使用 system 栈;MacOS 用户推荐 gvisor栈
+  stack: mixed        # 可选： system/gvisor/mixed；tun 模式堆栈,如无使用问题,建议使用 system 栈;MacOS 用户推荐 gvisor栈
                        # system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。 
                        # gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能
                        # mixed 混合堆栈,tcp使用 system栈,udp使用 gvisor栈,使用体验可能相对更好
@@ -61,9 +61,9 @@ dns:
   enhanced-mode: fake-ip   # 模式：redir-host或fake-ip
   listen: 0.0.0.0:53       # DNS监听地址
   fake-ip-range: 198.18.0.1/16    # Fake-IP解析地址池
-  fake-ip-filter: ['*.lan', 'cable.auth.com', '*.msftconnecttest.com', '*.msftncsi.com', 'network-test.debian.org', 'detectportal.firefox.com', 'resolver1.opendns.com', '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com', 'stun.*', 'global.turn.twilio.com', 'global.stun.twilio.com', 'localhost.*.qq.com', 'localhost.*.weixin.qq.com', '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', 'music.163.com', '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 'amobile.music.tc.qq.com', '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', 'proxy.golang.org', '*.mcdn.bilivideo.cn', '*.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', 'pool.ntp.org', '*.pool.ntp.org', 'ntp.*.com', 'time.*.com', 'ntp?.*.com', 'time?.*.com', 'time.*.gov', 'time.*.edu.cn', '*.ntp.org.cn', 'PDC._msDCS.*.*', 'DC._msDCS.*.*', 'GC._msDCS.*.*']
+  fake-ip-filter: ['*.lan', 'cable.auth.com', '*.msftconnecttest.com', '*.msftncsi.com', 'network-test.debian.org', 'detectportal.firefox.com', 'resolver1.opendns.com', '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com', 'stun.*', 'global.turn.twilio.com', 'global.stun.twilio.com', 'localhost.*.qq.com', 'localhost.*.weixin.qq.com', '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', 'music.163.com', '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 'amobile.music.tc.qq.com', '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', 'proxy.golang.org', '*.mcdn.bilivideo.cn', '*.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', 'pool.ntp.org', '*.pool.ntp.org', 'ntp.*.com', 'time.*.com', 'ntp?.*.com', 'time?.*.com', 'time.*.gov', 'time.*.edu.cn', '*.ntp.org.cn', 'PDC._msDCS.*.*', 'DC._msDCS.*.*', 'GC._msDCS.*.*', '*hnx.ctc*']
                           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
-  nameserver: [https://doh.pub/dns-query, https://dns.alidns.com/dns-query]               
+  nameserver: [https://doh.pub/dns-query, https://dns.alidns.com/dns-query]       
       
 ###建立锚点
     
@@ -97,7 +97,7 @@ i: &i {type: http, behavior: ipcidr, interval: 86400}
 ###结束
 
 proxy-providers:
-  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: ttp://your-service-provider}
+  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: http://your-service-provider}
     # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用base64或者node list
     # Sub-Store生成的链接,可以直接替换上述url引号中的部分,具体见Sub-Store教程         
                
@@ -107,7 +107,11 @@ proxy-groups:
 
   #分流分组
 
+  - {name: ♻️ 自动选择, <<: *auto}
+
   - {name: 🚀 手动切换, type: select, use: [Subscribe], proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT]}
+
+  - {name: ⚠️ 故障转移, <<: *fallback}
 
   - {name: 🌏 国外网站, <<: *pg}
 
@@ -149,9 +153,6 @@ proxy-groups:
 
   - {name: 🇨🇳 台湾节点, <<: *auto, filter: "(?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"}
 
-  - {name: ♻️ 自动选择, <<: *auto}
-
-  - {name: ⚠️ 故障转移, <<: *fallback}
 
 rule-providers:
 

@@ -1,3 +1,8 @@
+# DOMAIN  域名规则，如果请求的域完全匹配，则会匹配上此规则
+# DOMAIN-SUFFIX 域名后缀规则，如果请求的域名后缀匹配，则会匹配上此规则
+# DOMAIN-KEYWORD 域名关键词规则，如果请求的域名中包含关键字，则会匹配上此规则
+# 更多规则参考此文档：https://www.codein.icu/clashtutorial/#domain-suffix
+
 # sason
 DOMAIN-SUFFIX,sason.top
 DOMAIN,rfc-hk.sason.top
@@ -35,5 +40,13 @@ DOMAIN-SUFFIX,login.laiye
 DOMAIN-KEYWORD,captcha.g
 DOMAIN-KEYWORD,xiabb.chat
 DOMAIN-SUFFIX,www.c-tv
+DOMAIN-KEYWORD,qust
+DOMAIN-KEYWORD,jtedu
+DOMAIN-KEYWORD,qust
+DOMAIN-KEYWORD,qust
+DOMAIN,widget.intercom.io
+DOMAIN,vip.dedegpt.vip
+DOMAIN,chatgpt-plus.github.io
+DOMAIN-KEYWORD,buy.chatgpt123
 IP-CIDR,192.0.0.0/8,no-resolve
 IP-CIDR,134.0.0.0/8,no-resolve

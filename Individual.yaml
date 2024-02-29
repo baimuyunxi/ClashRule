@@ -233,13 +233,13 @@ rules:
   - RULE-SET,Emby,📽️ Emby
   - RULE-SET,ProxyMedia,📽️ 国际媒体
   - RULE-SET,ProxyGFW,🌏 国外网站
-  - RULE-SET,PrivateDirect,DIRECT
+  - RULE-SET,PrivateDirect,🎯 全球直连
   - RULE-SET,ChinaIp,🎯 全球直连
   - RULE-SET,ChinaDomain,🎯 全球直连
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,Lan,DIRECT
+  # - RULE-SET,Lan,DIRECT
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 兜底分流
 

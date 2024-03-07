@@ -1,6 +1,12 @@
 # ClashRule
 
+clash Verge:
+dns.js  DNS配置
+GeneralClashConfig.yaml  防止DNS泄露
+Individual.yaml  订阅配置
+
 yaml:备份
+
 ```
 parsers: # array
 - url: <https://suo>.*******

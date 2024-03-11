@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,checkip.synology.com
 DOMAIN-SUFFIX,snapman
 DOMAIN-SUFFIX,mihoyo
 DOMAIN-SUFFIX,51tkb
-DOMAIN-KEYWORD,134
+# DOMAIN-KEYWORD,134
 DOMAIN-KEYWORD,xiabb
 DOMAIN-KEYWORD,feixue666
 DOMAIN-SUFFIX,hcfy
@@ -34,7 +34,7 @@ DOMAIN-SUFFIX,tyrz-hq.hnx
 DOMAIN-SUFFIX,mssportal
 DOMAIN,idea.955code.com
 DOMAIN,mirrors.sjtug.sjtu.edu.cn
-DOMAIN-KEYWORD,192
+# DOMAIN-KEYWORD,192
 DOMAIN-KEYWORD,ppzhilian
 DOMAIN-SUFFIX,login.laiye
 DOMAIN-KEYWORD,captcha.g
@@ -48,7 +48,7 @@ DOMAIN,vip.dedegpt.vip
 DOMAIN,chatgpt-plus.github.io
 DOMAIN-KEYWORD,buy.chatgpt123
 DOMAIN-KEYWORD,mss.ctc.com
-IP-CIDR,113.0.0.0/8,no-resolve
-IP-CIDR,192.0.0.0/8,no-resolve
-IP-CIDR,134.0.0.0/8,no-resolve
-IP-CIDR,132.0.0.0/8,no-resolve
+IP-CIDR,113.0.0.0/32,no-resolve
+IP-CIDR,192.0.0.0/32,no-resolve
+IP-CIDR,134.0.0.0/32,no-resolve
+IP-CIDR,132.0.0.0/32,no-resolve

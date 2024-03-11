@@ -48,7 +48,7 @@ DOMAIN,vip.dedegpt.vip
 DOMAIN,chatgpt-plus.github.io
 DOMAIN-KEYWORD,buy.chatgpt123
 DOMAIN-KEYWORD,mss.ctc.com
-IP-CIDR,113.0.0.0/32,no-resolve
-IP-CIDR,192.0.0.0/32,no-resolve
-IP-CIDR,134.0.0.0/32,no-resolve
-IP-CIDR,132.0.0.0/32,no-resolve
+IP-CIDR,113.0.0.0/8,no-resolve
+IP-CIDR,192.0.0.0/8,no-resolve
+IP-CIDR,134.0.0.0/8,no-resolve
+IP-CIDR,132.0.0.0/8,no-resolve

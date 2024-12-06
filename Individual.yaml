@@ -4,14 +4,14 @@
 #
 # 此配置仅适用于Clash Verge/ClashMetaForAndroid,其他ClashMeta客户端未经测试
 #
-# 最后更新时间: 2024-2-13 12:45
+# 最后更新时间: 2024-12-06 
 #
 # ================
 
 mixed-port: 7893      # 混合端口 HTTP和SOCKS5用一个端口
 geodata-mode: true    #【Meta专属】使用geoip.dat数据库(默认：false使用mmdb数据库)
 tcp-concurrent: false #【Meta专属】TCP 并发连接所有 IP, 将使用最快握手的 TCP
-allow-lan: true       # 允许局域网的连接（可用来共享代理）
+allow-lan: true      # 允许局域网的连接（可用来共享代理）
 bind-address: "*"     # 仅在将allow-lan设置为true时适用
                       # #"*": 绑定所有IP地址
 find-process-mode: strict           #匹配所有进程（always/strict/off）
@@ -56,7 +56,7 @@ tun:                   # Tun 配置
   auto-detect-interface: true     # 自动识别出口网卡
         
 dns:
-  enable: true             # 关闭将使用系统 DNS
+  enable: true            # 关闭将使用系统 DNS
   ipv6: false              # IPV6解析开关；如果为false，将返回ipv6结果为空
   enhanced-mode: fake-ip   # 模式：redir-host或fake-ip
   listen: 0.0.0.0:53       # DNS监听地址
@@ -97,7 +97,7 @@ i: &i {type: http, behavior: ipcidr, interval: 86400}
 ###结束
 
 proxy-providers:
-  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: http://your-service-provider}
+  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: https://mercedes1208.xn--3iq226gfdb94q.com/link/EdWfdFKBcYEzS4sN?clash=1}
     # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用base64或者node list
     # Sub-Store生成的链接,可以直接替换上述url引号中的部分,具体见Sub-Store教程         
                
@@ -239,7 +239,7 @@ rules:
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,UnBan,🎯 全球直连
-  # - RULE-SET,Lan,DIRECT
+  # - RULE-SET,Lan,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 兜底分流
 
